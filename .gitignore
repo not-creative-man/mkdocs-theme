@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 site/
+node_modules/
+*.log
+.DS_Store
