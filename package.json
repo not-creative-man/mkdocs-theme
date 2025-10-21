@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-     "lint:js": "eslint theme/assets/script.js",
-     "format:js": "prettier --write theme/assets/script.js",
-     "validate": "npm run lint:js && npm run format:js",
-     "build:css": "postcss theme/assets/style.css -o theme/assets/style.min.css",
-     "validate:html": "html-validator --file site/index.html --verbose"
+    "build:css": "postcss theme/assets/style.css -o theme/assets/style.min.css",
+    "lint:js": "eslint theme/assets/script.js",
+    "format:js": "prettier --write theme/assets/script.js",
+    "validate": "npm run lint:js && npm run format:js",
+    "validate:html": "html-validator --file site/index.html --verbose",
+    "build": "npm run build:css"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.1.1",
-    "eslint": "^9.37.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
+    "eslint": "^9.37.0",
     "prettier": "^3.6.2"
   },
   "devDependencies": {
