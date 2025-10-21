@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мой кастомный сайт на MkDocs">
+    <meta name="author" content="{{ config.site_author }}">
+    <title>{{ page.title }} - {{ config.site_name }}</title>
+    <link rel="stylesheet" href="{{ 'assets/style.css' | url }}">
+</head>
+<body>
+    <header>
+        <h1>{{ config.site_name }}</h1>
+        <nav>
+            <a href="{{ base_url }}/">Главная</a>
+            <a href="{{ base_url }}/about/">О сайте</a>
+            <button id="theme-toggle" class="theme-toggle">🌓 Тема</button>
+        </nav>
+    </header>
+
+    <main role="main">
+        {% if page.content %}
+            {{ page.content }}
+        {% else %}
+            {{ content }}
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>© {{ config.site_author }}{% if build_date %} {{ build_date }}{% endif %}</p>
+    </footer>
+
+    <script src="{{ 'assets/script.js' | url }}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+site_name: "Мой кастомный сайт"
+site_author: "Лебедев Иван"
+theme:
+  name: null
+  custom_dir: theme
+  features:
+    - navigation.tabs
+    - no_header_links
+nav:
+  - Главная: index.md
+  - О сайте: about.md
+
+markdown_extensions:
+  - toc:
+      permalink: false
